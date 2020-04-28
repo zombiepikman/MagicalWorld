@@ -8,14 +8,12 @@ if(!message.member.permissions.has("KICK_MEMBERS")) return message.channel.send(
 
 if(args[0] == null) return message.channel.send("Use: !remove (user)");
 
-if(user.permissions.has("KICK_MEMBERS")) return message.channel.send("Deze gebruiker kan je niet van de ticker verwijderen!");
+if(user.permissions.has("KICK_MEMBERS")) return message.channel.send("Deze gebruiker kan je niet van de ticker verwijderen.");
 
 settedParent.updateOverwrite(user, {
     "SEND_MESSAGES": true, "VIEW_CHANNEL": true,
     "ATTACH_FILES": true
 });
-
-
 
 
 var removeEmbed = new discord.MessageEmbed()
