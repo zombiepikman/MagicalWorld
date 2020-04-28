@@ -10,7 +10,7 @@ if(args[0] == null) return message.channel.send("Use: !remove (user)");
 
 if(user.permissions.has("KICK_MEMBERS")) return message.channel.send("Deze gebruiker kan je niet van de ticker verwijderen.");
 
-settedParent.updateOverwrite(user, {
+user.updateOverwrite(user, {
     "SEND_MESSAGES": true, "VIEW_CHANNEL": true,
     "ATTACH_FILES": true
 });
