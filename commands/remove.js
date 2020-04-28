@@ -17,11 +17,13 @@ module.exports.run = async (bot, message, args) => {
 
 var author = (args[0]);
 
-if(!message.member.permissions.has("KICK_MEMBERS")) return message.channel.send("Hier heb jij **geen** rechten voor!");
+if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("Hier heb jij **geen** rechten voor!");
 
 if(args[0] == null) return message.channel.send("Use: !remove (user)");
 
-if(message.permissions.has("KICK_MEMBERS")) return message.channel.send("Deze gebruiker kan je niet van de ticker verwijderen.");
+if(message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("Deze gebruiker kan je niet van de ticker verwijderen.")
+
+
 
 channel.updateOverwrite(author, {
     "SEND_MESSAGES": true, "VIEW_CHANNEL": true,
