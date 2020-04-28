@@ -2,24 +2,29 @@ const discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
- if(!message.member.hasPermissions("KICK_MEMBERS")) return message.channel.send("Hier heb jij **geen** rechten voor!");
+var user =  message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[0]));
 
- if(args[0] == null) return message.channel.send("Gebruik: !remove (user)");
+if(!message.member.hasPermissions("KICK_MEMBERS")) return message.channel.send("Hier heb jij **geen** rechten voor!");
 
-if(args[1] == null) return message.channel.send("Geef een user op!"); 
+if(args[0] == null) return message.channel.send("Use: !remove (user)");
+
+if(user.hasPermissions("KICK_MEMBERS")) return message.channel.send("Deze gebruiker kan je niet van de ticker verwijderen!");
+
+settedParent.updateOverwrite(user, {
+    "SEND_MESSAGES": true, "VIEW_CHANNEL": true,
+    "ATTACH_FILES": true
+});
+
+
+
+
+var removeEmbed = new discord.MessageEmbed()
+.setColor("#00ee00")
+.setTitle(`User ${user} removed from the ticket!`);
+
+message.channel.send(removeEmbed);
  
-    var createdChan = userName + "-" + userDiscriminator;
-
-    createdChan.setParent(categoryId).then((settedParent) => {
-
-    settedParent.updateOverwrite(message.author, {
-        "SEND_MESSAGES": false, "VIEW_CHANNEL": false,
-        "ATTACH_FILES": false 
-    });
-    
-
-
-})};
+}
 
 module.exports.help = {
     name: "remove"
