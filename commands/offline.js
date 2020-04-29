@@ -16,6 +16,6 @@ message.channel.send("Done!");
 }
 
 module.exports.help = {
-    name: "online"
+    name: "offline"
 
 }
