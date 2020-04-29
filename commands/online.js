@@ -11,6 +11,8 @@ var embedOnline = new discord.MessageEmbed()
 
 sendChannel.send(embedOnline);
 
+message.channel.send("Done!");
+
 }
 
 module.exports.help = {
