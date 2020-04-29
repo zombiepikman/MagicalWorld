@@ -39,20 +39,20 @@ bot.on("ready", async () => {
 
 bot.on("guildMemberAdd", member => {
 
-var role = member.guild.roles.cache.find(r => r.name ==  "✨Bezoeker✨"); 
-var role2 = member.guild.roles.cache.find(r => r.name ==  "------------------Rol------------------");
+var role = member.guild.roles.cache.find(r => r.name ==  "✨Visitor✨"); 
+var role2 = member.guild.roles.cache.find(r => r.name ==  "»----------------------------------------«");
 
 if(!role) return console.log("rol 1 niet gevonden");
 if(!role2) return console.log("role 2 niet gevonden!");
 
-member.roles.add(role);
+    member.roles.add(role);
 member.roles.add(role2);
 
-const channel = member.guild.channels.cache.find(c => c.name == "🔷console");
+const consoleChannel = member.guild.channels.cache.find(c => c.name == "🔷console");
 
 if(!channel) return Console.log("console kanaal niet gecvonden");
 
-channel.send(`${member} heeft de rol *Bezoeker* gekregen!`);
+consoleChannel.send(`${member} heeft de rol *Bezoeker* gekregen!`);
 
 
 });
