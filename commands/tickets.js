@@ -46,7 +46,7 @@ module.exports.run = async (bot, message, args) => {
 
             var embedParrent = new discord.MessageEmbed()
                 .setTitle("Hello, " + message.author.username.toString())
-                .setDescription(`:flag_nl: Zet hier je vraag of bericht en je wordt zo snel mogelijk geholpen \n :flag_gb: Put your question or message here and you will be helped as soon as possible`)
+                .setDescription(`Put your question or message here and you will be helped as soon as possible`)
 
             settedParent.send(embedParrent);
 settedParent.send("@everyone")
