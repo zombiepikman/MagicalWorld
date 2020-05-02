@@ -45,12 +45,12 @@ var role2 = member.guild.roles.cache.find(r => r.name ==  "»-------------------
 if(!role) return console.log("rol 1 niet gevonden");
 if(!role2) return console.log("role 2 niet gevonden!");
 
-    member.roles.add(role);
+member.roles.add(role);
 member.roles.add(role2);
 
 const consoleChannel = member.guild.channels.cache.find(c => c.name == "🔷console");
 
-if(!channel) return Console.log("console kanaal niet gecvonden");
+if(!consoleChannel) return Console.log("console kanaal niet gecvonden");
 
 consoleChannel.send(`${member} heeft de rol *Bezoeker* gekregen!`);
 
