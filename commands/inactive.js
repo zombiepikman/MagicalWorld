@@ -4,16 +4,13 @@ module.exports.run = async (bot, message, args) => {
 
     if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("Sorry, hier heb jij **geen** rechten voor!");
 
-if(args == null) return ("!inactive reason time");
+if(args == null) return ("Use: !inactive reason time");
 
     var user = message.author;
 
 
     var reason = args.join(" ").slice(22);
-
-
-
-
+if(!reason) return message.channel.send("Give a reason!");
   
     message.delete();
 
@@ -28,7 +25,7 @@ if(args == null) return ("!inactive reason time");
 
 
     var consoleChannel = message.guild.channels.cache.find(c => c.name == "🔷console");
-    if (!warnChannel) return console.log("Kan het kanaal niet vinden!");
+    if (!consoleChannel) return console.log("Kan het kanaal niet vinden!");
 
     return consoleChannel.send(inactiveEmbed);
 
