@@ -9,7 +9,7 @@ if(args == null) return ("Use: !inactive reason time");
     var user = message.author;
 
 
-    var reason = args.join(" ").slice(22);
+    var reason = args[1].join(" ");
 if(!reason) return message.channel.send("Give a reason!");
   
     message.delete();
