@@ -9,16 +9,16 @@ if(args == null) return ("Use: !inactive reason time");
     var user = message.author;
 
 
-    var reason = args[1].join(" ");
-if(!reason) return message.channel.send("Give a reason!");
+    var reason = args.join(" ");
+
   
     message.delete();
 
     var inactiveEmbed = new discord.MessageEmbed()
         .setTitle("Inactivity")
         .setColor("ee0000")
-        .addField("Inactive user:", user)
-        .addField("Reason", reason);
+        .addField(user)
+        .setDescription(`${reason}`)
 
     message.channel.send(`${user} \n Your inactive time has been sent to the directors!`);
 
