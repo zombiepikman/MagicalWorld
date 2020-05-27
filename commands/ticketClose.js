@@ -21,7 +21,7 @@ var botCommands = message.guild.channels.cache.find(c => c.name == "🧾commands
    
   var embedCloseTicket = new discord.MessageEmbed()
     .setTitle("Hello, " + message.channel.name)
-    .setDescription(`:flag_nl: Je ticket is gemarkeerd als **Afgerond**, Wilt u een nieuwe maken doe dan !ticket \n :flag_gb: Your ticket is marked as **completed** If you want to make a new one please do !Ticket`)
+    .setDescription(`Your ticket is marked as **completed** If you want to make a new one please do !Ticket`)
     .setFooter("Ticket gesloten");
 
    botCommands.send(embedCloseTicket);

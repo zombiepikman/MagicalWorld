@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
         var useMesage = new discord.MessageEmbed()
             .setTitle("Gebruik")
             .setColor("#00ee00")
-            .setDescription(`Maak een omroep door gebruikt te maken van: \n **!omroep Titel ${splitser} Bericht ${splitser} Kleur ${splitser} Kanaal**`);
+            .setDescription(`Maak een omroep door gebruikt te maken van: \n **!broadcast Titel ${splitser} Bericht ${splitser} Kleur ${splitser} Kanaal**`);
 
         return message.channel.send(useMesage);
 
