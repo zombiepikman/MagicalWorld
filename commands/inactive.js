@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
 
     if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("Sorry, hier heb jij **geen** rechten voor!");
 
-if(args == null) return ("Use: !inactive reason time");
+if(args[0] == null) return ("Use: !inactive reason time");
 
     var user = message.author;
 
