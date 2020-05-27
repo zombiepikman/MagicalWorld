@@ -35,7 +35,6 @@ if(args == null) return ("!inactive reason time");
 
     return consoleChannel.send(inactiveEmbed);
 
-
 }
 
 module.exports.help = {
