@@ -14,7 +14,7 @@ if(args == null) return ("!inactive reason time");
 
     var reason = args.join(" ").slice(22);
 
-    if (!reason) return message.channel.send("Geef een reden op!");
+
 
 
   
