@@ -15,7 +15,7 @@ if(args[0] == null) return ("Use: !inactive reason time");
     var inactiveEmbed = new discord.MessageEmbed()
         .setTitle("Inactivity")
         .setColor("ee0000")
-        .setDescription(`User: ${user} \n Reason: ${reason}`);
+        .setDescription(`User: ${user} \n Reason & time: ${reason}`);
 
     message.channel.send(`${user} \n Your inactive time has been sent to the directors!`);
 
