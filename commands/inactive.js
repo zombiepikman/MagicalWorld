@@ -25,7 +25,7 @@ if(args[0] == null) return ("Use: !inactive reason time");
     var consoleChannel = message.guild.channels.cache.find(c => c.name == "🔷console");
     if (!consoleChannel) return console.log("Kan het kanaal niet vinden!");
 
-   return message.consoleChannel.send(inactiveEmbed);
+   return consoleChannel.send(inactiveEmbed);
 
 }
 

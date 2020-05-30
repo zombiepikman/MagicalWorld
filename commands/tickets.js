@@ -49,7 +49,7 @@ module.exports.run = async (bot, message, args) => {
                 .setDescription(`Put your question or message here and you will be helped as soon as possible`)
 
             settedParent.send(embedParrent);
-settedParent.send("@everyone")
+settedParent.send("@here")
 message.delete();
  
         })
