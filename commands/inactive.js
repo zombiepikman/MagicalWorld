@@ -8,16 +8,14 @@ if(args[0] == null) return ("Use: !inactive reason time");
 
     var user = message.author;
 
-
     var reason = args.join(" ");
-
   
     message.delete();
 
     var inactiveEmbed = new discord.MessageEmbed()
         .setTitle("Inactivity")
         .setColor("ee0000")
-        .addField(user)
+        .addField(`User: ${user}`)
         .setDescription(`${reason}`)
 
     message.channel.send(`${user} \n Your inactive time has been sent to the directors!`);
@@ -27,7 +25,7 @@ if(args[0] == null) return ("Use: !inactive reason time");
     var consoleChannel = message.guild.channels.cache.find(c => c.name == "🔷console");
     if (!consoleChannel) return console.log("Kan het kanaal niet vinden!");
 
-    return consoleChannel.send(inactiveEmbed);
+    message.consoleChannel.send(inactiveEmbed);
 
 }
 
