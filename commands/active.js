@@ -20,7 +20,6 @@ if(args[0] == null) return ("Use: !active");
     message.channel.send(`${user} \n Your active has been sent to the directors!`);
 
 
-
     var consoleChannel = message.guild.channels.cache.find(c => c.name == "🔷console");
     if (!consoleChannel) return console.log("Kan het kanaal niet vinden!");
 
