@@ -4,11 +4,7 @@ module.exports.run = async (bot, message, args) => {
 
     if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("Sorry, hier heb jij **geen** rechten voor!");
 
-if(args[0] == null) return ("Use: !active");
-
     var user = message.author;
-
-    var reason = args.join(" ");
   
     message.delete();
 
