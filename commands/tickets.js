@@ -44,6 +44,10 @@ module.exports.run = async (bot, message, args) => {
                 "SEND_MESSAGES": true, "VIEW_CHANNEL": true,
                 "ATTACH_FILES": true })).catch(console.error);
 
+                message.guild.roles.fetch('643063207908474890').then(role => settedParent.updateOverwrite(role, {
+                    "SEND_MESSAGES": true, "VIEW_CHANNEL": true,
+                    "ATTACH_FILES": true })).catch(console.error);
+
             var embedParrent = new discord.MessageEmbed()
                 .setTitle("Hello, " + message.author.username.toString())
                 .setDescription(`Put your question or message here and you will be helped as soon as possible`)
