@@ -29,6 +29,6 @@ message.channel.send(`Now playing: ${info.title}`);
 }
 
 module.exports.help = {
-    name: "help"
+    name: "play"
 
 }
