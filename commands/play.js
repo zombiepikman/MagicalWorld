@@ -24,7 +24,7 @@ var dispatcher = voiceChannel.play(stream, options);
 
 }).catch(console.error);
 
-message.channel.send(`Now playing: ${info.title}`);
+message.channel.send(`now playing: ${info.title}`);
 
 }
 
